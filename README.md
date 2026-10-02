@@ -26,6 +26,23 @@ javac -d out POOBJ/*.java
 java -cp out BlackjackMain
 ```
 
+Les versions procédurales se compilent et s'exécutent séparément (elles ont chacune leur propre `main`) :
+
+```bash
+javac -d out Blackjack.java
+java -cp out Blackjack
+
+javac -d out ExtendedBlackjack.java
+java -cp out ExtendedBlackjack
+```
+
+L'utilitaire d'extraction de source attend le fichier source et le nom de la méthode à extraire :
+
+```bash
+javac -d out ExtractMethodText.java
+java -cp out ExtractMethodText POOBJ/Player.java calculateGain
+```
+
 ## Organisation du projet
 
 | Fichier | Rôle |

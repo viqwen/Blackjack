@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+  <property name="charset" value="UTF-8"/>
+
+  <module name="LineLength">
+    <property name="max" value="256"/>
+  </module>
+
+  <module name="TreeWalker">
+
+    <!-- Signature des méthodes -->
+    <module name="ParameterName">
+      <property name="format" value="^[a-zA-Z][a-zA-Z0-9]*$"/>
+    </module>
+
+    <module name="ModifierOrder"/>
+    <module name="MethodParamPad"/>
+
+    <!-- Accolades en fin de ligne -->
+    <module name="LeftCurly">
+      <property name="option" value="eol"/>
+      <property name="ignoreEnums" value="true"/>
+    </module>
+
+    <!-- ==== LIGNES VIDES ==== -->
+    <module name="EmptyLineSeparator">
+      <!-- Vérifie qu’il y a une ligne vide avant chaque définition de méthode -->
+      <property name="tokens"
+                value="METHOD_DEF, CTOR_DEF"/>
+    </module>
+
+     <!-- Indentation -->
+    <module name="Indentation">
+      <property name="basicOffset" value="4"/>
+      <property name="lineWrappingIndentation" value="4"/>
+      <property name="braceAdjustment" value="0"/>
+      <property name="throwsIndent" value="4"/>
+    </module>
+
+  </module>
+</module>

@@ -1,0 +1,28 @@
+# Binaires de compilation Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Fichiers de sortie / logs
+*.log
+*.out
+hs_err_pid*.log
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environnements de développement
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+nbproject/
+*.swp
+*~
